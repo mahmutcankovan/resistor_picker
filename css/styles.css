@@ -1,0 +1,57 @@
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.main, .selector, h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    margin: 20px;
+}
+
+#digit-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resistor-body {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: burlywood;
+    margin-bottom: 20px;
+}
+
+#resistor-terminal-left, #resistor-terminal-right {
+    height: 10%;
+    width:10%;   
+    background-color: silver;
+} 
+
+#resistor-terminal-left {
+    margin-left: -40px;
+}
+
+#resistor-terminal-right {
+    margin-right: -40px;
+}
+
+.resistor-color-band {
+    height: 100%;
+    width: 5%;
+    border: 1px solid black;
+    background-color: burlywood;
+}
