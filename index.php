@@ -23,10 +23,17 @@
                 <h3>Choose Your Resistor Color</h3>
             </div>
             <div class="form">
+            <div id="selector-title">
+                <h4>First Digit</h4>
+                <h4>Second Digit</h4>
+                <h4>Third Digit</h4>
+                <h4>Fourth Digit</h4>
+                <h4>Fifth Digit</h4>
+                <h4>Sixth Digit</h4>
+            </div>
             <form action="index.php" method="post">
-                <select name="first-digit" id="first-digit-selector" required>
-                    
-                    <option value="">1. Band Color</option>
+                <div id="color-selector">
+                  <select name="first-digit" id="first-digit-selector" required size="13" >
                     <option value="black">Black</option>
                     <option value="brown" selected>Brown</option>
                     <option value="red">Red</option>
@@ -38,9 +45,8 @@
                     <option value="grey">Grey</option>
                     <option value="white">White</option>
                     
-                </select>
-                <select name="second-digit" id="second-digit-selector" required>
-                    <option value="">2. Band Color</option>
+                  </select>
+                  <select name="second-digit" id="second-digit-selector" required size="13" >
                     <option value="black">Black</option>
                     <option value="brown" selected>Brown</option>
                     <option value="red">Red</option>
@@ -52,9 +58,8 @@
                     <option value="grey">Grey</option>
                     <option value="white">White</option>
                                     
-                </select>
-                <select name="third-digit" id="third-digit-selector" required>
-                    <option value="">3. Band Color</option>
+                  </select>
+                  <select name="third-digit" id="third-digit-selector" required size="13" >
                     <option value="black" selected>Black</option>
                     <option value="brown">Brown</option>
                     <option value="red">Red</option>
@@ -66,9 +71,8 @@
                     <option value="grey">Grey</option>
                     <option value="white">White</option>
                                     
-                </select>
-                <select name="fourth-digit" id="fourth-digit-selector">
-                    <option value="">4. Band Color</option>
+                  </select>
+                  <select name="fourth-digit" id="fourth-digit-selector" size="13" >
                     <option value="black">Black</option>
                     <option value="brown">Brown</option>
                     <option value="red">Red</option>
@@ -82,24 +86,19 @@
                     <option value="gold">Gold</option>
                     <option value="silver">Silver</option>
                     <option value="burlywood" selected>No-color</option>                 
-                </select>
-                <select name="fifth-digit" id="fifth-digit-selector">
-                    <option value="">5. Band Color</option>
-
+                   </select>
+                  <select name="fifth-digit" id="fifth-digit-selector" size="13" >
                     <option value="brown">Brown</option>
                     <option value="red">Red</option>
-
                     <option value="green">Green</option>
                     <option value="blue" selected>Blue</option>
                     <option value="violet">Violet</option>
                     <option value="grey">Grey</option>
-
                     <option value="gold">Gold</option>
                     <option value="silver">Silver</option>
                     <option value="burlywood">No-color</option>                 
-                </select>
-                <select name="sixth-digit" id="sixth-digit-selector" >
-                    <option value="">6. Band Color</option>
+                 </select>
+                  <select name="sixth-digit" id="sixth-digit-selector" size="13" >
                     <option value="black">Black</option>
                     <option value="brown">Brown</option>
                     <option value="red">Red</option>
@@ -111,14 +110,12 @@
                     <option value="grey">Grey</option>
 
                     <option value="burlywood" selected>No-color</option>                 
-                </select>
-                <input type="submit">
-
-            </form>
-            </div>
+                 </select>
+                </div>
+                <div id="input-button"><input type="submit" value="Calculate"></div>
+                </form>
         </section>
         <section class="main">
-
             <div id="resistor-body">
                 <div id="resistor-terminal-left"></div>
                 <div class="resistor-color-band" id="first-digit"></div>
@@ -130,6 +127,7 @@
                 <div id="resistor-terminal-right"></div>
             </div>
         </section>
+        
         <?php 
             /*Submit'e basınca değerler neden sıfırlanıyor? */
             $firstDigitColor = $_POST["first-digit"];
