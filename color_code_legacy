@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Direnc Hesaplayici</title>
+    </head>
+    <body>
+        <br>
+        <br>
+        <script language="JavaScript">
+            function hesapla ()
+            {
+                var baseval = document.theform.renk1.selectedIndex+document.theform.renk2.selectedIndex/10
+                var us = document.theform.renk3.selectedIndex
+                var gosterge = "ohm"
+                if( us>2 && us<6)
+                {
+                    us = us-3
+                    gosterge = "Mohm"
+                }
+            var usdeger = 1
+            for (var i=0; i<us; i++)
+            {
+                usdeger=usdeger*10
+            }
+            baseval = baseval*usdeger
+            document.theform.dirdeger.value = baseval
+            document.theform.dirgost.value = gosterge
+            }
+        </script>
+        Direnc Hesaplayicisi: <br>
+        Direnc degerini bulmak icin, once soldan baslayarak renkleri secin. Sonra da Hesapla! dugmesine tiklayin...
+        <form name="theform">
+            Direnc Degeri:
+            <input name="dirdeger" value="0" size="5">
+            <input name="dirgost" value="ohm" size="4">
+            <br><br><br>
+            <select name="renk1">
+                <option > Siyah
+                <option > Kahverengi
+                <option > Kirmizi
+                <option > Turuncu
+                <option > Sari
+                <option > Yesil
+                <option > Mavi
+                <option > Mor
+                <option > Gri
+                <option > Beyaz
+            </select>
+            <select name="renk2">
+                <option > Siyah
+                <option > Kahverengi
+                <option > Kirmizi
+                <option > Turuncu
+                <option > Sari
+                <option > Yesil
+                <option > Mavi
+                <option > Mor
+                <option > Gri
+                <option > Beyaz
+            </select>
+            <select name="renk3">
+                <option > Siyah
+                <option > Kahverengi
+                <option > Kirmizi
+                <option > Turuncu
+                <option > Sari
+                <option > Yesil
+                <option > Mavi
+                <option > Mor
+                <option > Gri
+                <option > Beyaz
+            </select>
+            <br><br>
+            <input type="Button" name="hesapbutonu" value="Hesapla!" onclick="hesapla()">
+        </form>
+    </body>
+</html>
